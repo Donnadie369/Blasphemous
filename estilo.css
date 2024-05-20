@@ -1,0 +1,260 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("public/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("public/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular", sans-serif;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: rgba(19, 19, 19, 0.959);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(1fr, auto);
+  grid-template-areas:
+    "header"
+    "hero"
+    "menu"
+    "contenido "
+    "articulo "
+    "footer";
+}
+
+header {
+  grid-area: header;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(6, 0, 19);
+    border-radius: 13px;
+    margin: 1rem;
+
+    p {
+      font-family: "Roboto-Bold", sans-serif;
+      color: #c5ada4;
+    }
+
+    img {
+      flex-basis: 9.375em;
+      padding: 10px;
+    }
+
+    .audio-container {
+      text-align: center;
+    }
+
+    #audioControl {
+      height: auto;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 5px 5px;
+      cursor: pointer;
+      border: none;
+      background-color: rgb(4, 0, 12);
+      color: white;
+      border-radius: 100px;
+      transition: background-color 0.3s;
+  }
+
+    button:hover {
+      background-color: rgb(4, 0, 12);
+      
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          font-weight: 200;
+          color: #ffffff;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  grid-area: hero;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  picture {
+    img {
+      border-radius: 40px;
+      width: 72vw;
+      padding: 30px;
+    }
+  }
+
+  .hero-content {
+    color: rgba(255, 255, 255, 0.11);
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
+
+    h3 {
+      font-size: 15px;
+    }
+
+  }
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  position: sticky;
+  border-radius: 12px;
+  top: 0.85rem;
+  z-index: 999;
+  margin: auto;
+  width: 40%;
+  height: 80px;
+  margin-bottom: 1rem;
+  max-width: 90vw;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(9, 0, 39, 0.699);
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+    align-items: center;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.contenido {
+  grid-area: contenido;
+  display: flex;
+  flex-direction: column;
+  max-height: fit-content;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 0.25rem;
+
+  video {
+    max-width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin: 12px auto;
+    border-radius: 24px;
+  }
+
+  p {
+    color: #ffffff;
+    font-style: italic;
+    text-align: justify;
+    border-radius: 12px;
+    background-color: rgb(43, 43, 43);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 2rem;
+    padding-bottom: 2rem;
+    margin: 30px;
+    font-size: 20px;
+  }
+}
+
+.articulo {
+  grid-area: articulo;
+  display: flex;
+  overflow-x: scroll;
+  max-width: 100%;
+  gap: 1rem;
+  margin: auto 1rem;
+
+  img {
+    border-radius: 40px;
+    max-width: 75%;
+    padding: 20px;
+  }
+}
+
+footer {
+  grid-area: footer;
+  min-height: 10vh;
+  display: flex;
+  padding: 5px 20px;
+  justify-content: space-between;
+  align-items: end;
+  color: #823c3c;
+  background-color: rgb(6, 0, 19);
+
+  p {
+    text-align: center;
+    align-items: center;
+    font-size: large;
+    font-size: 20px;
+  }
+
+  nav {
+    padding: 0.25rem;
+    margin: 0 12px;
+    flex-wrap: wrap;
+
+    ul {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.25em;
+
+      li {
+        list-style: none;
+        text-align: center;
+        margin: 0 auto;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

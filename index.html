@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Blasphemous</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="public/images/41f4893a58fba89b8e7535aadb39ccf4.png" alt="logo" width="100px">
+      <div class="audio-container header__bgm">
+        <button id="soundButton"><img id="audioControl" src="public/images/descarga2.png" alt="Play/Pause"
+            class="scale-down-center" width="40px">
+          <audio id="musica" loop>
+            <source src="resource/Dame Tu Tormento.mp3" type="audio/mpeg">
+          </audio>
+        </button>
+
+      </div>
+      <ul>
+        <li><a href="/home">Inicio</a></li>
+        <li><a href="/wiki">Wiki</a></li>
+        <li><a href="/soporte">Soporte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 600px)" srcset="/public/images/mobile.jpg" />
+      <source media="(min-width: 600px)" srcset="/public/images/desktop.jpg" />
+      <img src="/public/images/mobile.jpg" alt="pecado"/>
+    </picture>
+    <div class="hero-content">
+      <h3>
+        "NO HABRA
+        PENITENCIA
+        ALGUNA <br>QUE
+        EXONERE ESTE
+        PECADO"
+      </h3>
+    </div>
+  </section>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="https://store.epicgames.com/es-ES/p/blasphemous" alt="plank">Descargar</a></li>
+    </ul>
+  </nav>
+
+  <section class="contenido">
+    <video src="/public/images/Blasphemous - Announcement Trailer  PS4.mp4" width="600" autoplay muted>
+      Tu navegador no soporta la etiqueta
+    </video>
+    <p>
+      "Blasphemous es un juego de acción y plataformas sin piedad, con un combate hack 'n slash que requiere pericia, y
+      está ambientado en el mundo de pesadilla de Cvstodia. Explora, mejora tus habilidades y ejecuta salvajemente a las
+      hordas de enemigos que se interponen en tu camino."
+    </p>
+  </section>
+  <section class="articulo">
+    <img src="public/images/egs-blasphemous-thegamekitchen-g1a-02-12-2-1920x1080-45e564ba5e42.jpg" alt="1" />
+    <img src="public/images/egs-blasphemous-thegamekitchen-g1a-03-12-2-1920x1080-1c7c3ebda2b7.jpg" alt="2" />
+    <img src="public/images/egs-blasphemous-thegamekitchen-g1a-03-1920x1080-43487c051125.jpg" alt="3" />
+    <img src="public/images/egs-blasphemous-thegamekitchen-g1a-04-12-2-1920x1080-5780562e0b7c.jpg" alt="4" />
+  </section>
+  <footer>
+    <p>
+      BLASPHEMOUS &#169
+    </p>
+
+    <nav class="footer-nav-redes-sociales">
+      <ul>
+        <li><a href="/facebook"><img src="/public/images/facebook.svg" width="24px" /></a></li>
+        <li><a href="/instagram"><img src="/public/images/instagram.svg" width="24px" /></a></li>
+        <li><a href="/tiktok"><img src="/public/images/tiktok.svg" width="24px" /></a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementById('soundButton');
+    const audio = document.getElementById('musica');
+
+    button.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+});
+
+</script>
+
+</html>
